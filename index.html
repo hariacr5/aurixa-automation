@@ -1,199 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Aurixa Automation helps businesses automate repetitive work across SAP, Excel, email, ERP and AI-powered workflows.">
-  <title>Aurixa Automation | Intelligent Automation for Smarter Businesses</title>
-  <style>
-    :root{
-      --navy:#071b36; --navy2:#0d2b50; --orange:#ff9800; --orange2:#ffb52e;
-      --blue:#1479d1; --text:#15253b; --muted:#607089; --light:#f5f8fc; --white:#fff;
-      --shadow:0 14px 40px rgba(7,27,54,.12); --radius:20px;
-    }
-    *{box-sizing:border-box;margin:0;padding:0}
-    html{scroll-behavior:smooth}
-    body{font-family:Arial,Helvetica,sans-serif;color:var(--text);background:#fff;line-height:1.6}
-    a{text-decoration:none;color:inherit}
-    .container{width:min(1120px,92%);margin:auto}
-    .topbar{background:var(--navy);color:#dbe8f7;font-size:13px;padding:8px 0;text-align:right}
-    header{position:sticky;top:0;z-index:50;background:rgba(7,27,54,.96);backdrop-filter:blur(10px);color:white}
-    .nav{height:72px;display:flex;align-items:center;justify-content:space-between}
-    .brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.4px}
-    .logo{width:40px;height:40px;border:3px solid var(--orange);display:grid;place-items:center;transform:rotate(45deg);border-radius:8px}
-    .logo span{transform:rotate(-45deg);font-size:20px}
-    .brand small{display:block;color:#a9bdd5;font-size:10px;letter-spacing:1.5px}
-    nav{display:flex;gap:25px;font-size:14px}
-    nav a:hover{color:var(--orange2)}
-    .navcta{background:var(--orange);color:#111;padding:11px 16px;border-radius:999px;font-weight:800}
-    .hero{background:radial-gradient(circle at 78% 35%,#164d82 0,#0b2b50 30%,#071b36 70%);color:white;overflow:hidden}
-    .hero-grid{min-height:650px;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:40px;padding:80px 0}
-    .eyebrow{color:var(--orange2);font-weight:800;letter-spacing:2px;text-transform:uppercase;font-size:13px;margin-bottom:14px}
-    h1{font-size:clamp(44px,6vw,76px);line-height:.98;letter-spacing:-2px;margin-bottom:24px}
-    h1 span{color:var(--orange)}
-    .hero p{font-size:20px;color:#d6e4f3;max-width:650px;margin-bottom:30px}
-    .buttons{display:flex;gap:14px;flex-wrap:wrap}
-    .btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 21px;border-radius:10px;font-weight:800}
-    .btn-primary{background:var(--orange);color:#101010}
-    .btn-secondary{border:1px solid #6682a1;color:white}
-    .hero-card{position:relative;min-height:470px;display:grid;place-items:center}
-    .orb{width:350px;height:350px;border-radius:50%;background:radial-gradient(circle,#eef8ff 0 16%,#91c6ef 17% 35%,#1479d1 36% 55%,transparent 56%);filter:drop-shadow(0 0 55px rgba(20,121,209,.5))}
-    .robot{position:absolute;font-size:180px;filter:drop-shadow(0 20px 20px rgba(0,0,0,.25))}
-    .bubble{position:absolute;background:white;color:var(--navy);padding:10px 14px;border-radius:14px;box-shadow:var(--shadow);font-weight:800;font-size:12px}
-    .b1{top:55px;left:20px}.b2{top:25px;right:20px}.b3{bottom:95px;left:0}.b4{bottom:40px;right:35px}
-    .stats{background:white;color:var(--text);box-shadow:0 10px 30px rgba(0,0,0,.12);border-radius:18px;display:grid;grid-template-columns:repeat(4,1fr);margin-top:-55px;position:relative;z-index:5}
-    .stat{padding:24px;text-align:center;border-right:1px solid #e5ebf2}.stat:last-child{border:0}
-    .stat strong{display:block;font-size:28px;color:var(--orange);margin-bottom:4px}.stat span{font-size:13px;color:var(--muted)}
-    section{padding:90px 0}.section-head{text-align:center;max-width:760px;margin:0 auto 48px}
-    .section-head h2{font-size:40px;color:var(--navy);line-height:1.1;margin-bottom:14px}
-    .section-head p{color:var(--muted)}
-    .cards{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-    .card{background:white;border:1px solid #e7edf5;border-radius:var(--radius);padding:25px;box-shadow:0 8px 24px rgba(7,27,54,.06);transition:.2s}
-    .card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
-    .icon{font-size:30px;margin-bottom:14px}.card h3{font-size:18px;margin-bottom:7px;color:var(--navy)}.card p{font-size:14px;color:var(--muted)}
-    .alt{background:var(--light)}
-    .impact{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
-    .impact h2{font-size:42px;line-height:1.1;color:var(--navy);margin-bottom:18px}
-    .impact p{color:var(--muted);margin-bottom:25px}
-    .impact-list{display:grid;gap:14px}.impact-item{display:flex;gap:14px;align-items:flex-start;background:white;padding:17px;border-radius:14px;border:1px solid #e6edf5}
-    .check{width:30px;height:30px;border-radius:50%;background:#eaf4ff;color:var(--blue);display:grid;place-items:center;font-weight:900;flex:none}
-    .impact-item strong{display:block;color:var(--navy)}.impact-item span{font-size:13px;color:var(--muted)}
-    .process{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
-    .step{position:relative;padding:25px 18px;background:var(--navy);color:white;border-radius:18px}.step .num{font-size:12px;color:var(--orange2);font-weight:900}.step h3{margin:8px 0}.step p{font-size:13px;color:#bfd0e4}
-    .industries{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.industry{padding:20px;background:white;border:1px solid #e5ebf2;border-radius:14px;font-weight:800;color:var(--navy)}
-    .cta{background:linear-gradient(120deg,var(--orange),#ffbf45);padding:70px 0}.cta-box{display:flex;justify-content:space-between;align-items:center;gap:30px}.cta h2{font-size:40px;line-height:1.1;color:#101820}.cta p{max-width:650px;margin-top:10px;color:#343b42}.btn-dark{background:var(--navy);color:white}
-    .contact{display:grid;grid-template-columns:1fr 1fr;gap:30px}.contact-card{background:var(--navy);color:white;border-radius:24px;padding:35px}.contact-card h2{font-size:38px;line-height:1.1;margin-bottom:12px}.contact-card p{color:#c3d3e6}.contact-row{display:flex;gap:13px;align-items:center;margin-top:20px}.contact-row a{color:white}.contact-row a:hover{color:var(--orange2)}
-    form{background:white;border:1px solid #e4ebf3;border-radius:24px;padding:30px;box-shadow:var(--shadow)}label{font-size:13px;font-weight:800;color:var(--navy);display:block;margin-bottom:6px}input,textarea,select{width:100%;border:1px solid #d9e2ed;border-radius:10px;padding:13px;margin-bottom:15px;font:inherit}textarea{min-height:110px;resize:vertical}
-    footer{background:#041224;color:#9eb2ca;padding:25px 0;text-align:center;font-size:13px}
-    .wa{position:fixed;right:20px;bottom:20px;width:58px;height:58px;border-radius:50%;background:#25D366;color:white;display:grid;place-items:center;font-weight:900;font-size:25px;box-shadow:0 8px 25px rgba(0,0,0,.25);z-index:60}
-    @media(max-width:900px){nav{display:none}.hero-grid,.impact,.contact{grid-template-columns:1fr}.hero-card{min-height:360px}.cards{grid-template-columns:repeat(2,1fr)}.process{grid-template-columns:1fr 1fr}.industries{grid-template-columns:repeat(2,1fr)}.stats{grid-template-columns:repeat(2,1fr)}.stat:nth-child(2){border-right:0}.stat{border-bottom:1px solid #e5ebf2}.cta-box{flex-direction:column;align-items:flex-start}}
-    @media(max-width:560px){section{padding:65px 0}.cards,.process,.industries{grid-template-columns:1fr}.stats{grid-template-columns:1fr}.stat{border-right:0}.hero-grid{padding:55px 0}.hero-card{display:none}h1{font-size:50px}.section-head h2,.impact h2,.cta h2{font-size:32px}}
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Aurixa Automation helps growing businesses automate repetitive processes across SAP, Excel, email, ERP, documents and AI-powered workflows.">
+<meta name="theme-color" content="#071b36">
+<title>Aurixa Automation | Intelligent Automation for Growing Businesses</title>
+<style>
+:root{--navy:#071b36;--navy2:#0c2b50;--blue:#1479d1;--orange:#ff9800;--orange2:#ffb52e;--ink:#14243a;--muted:#64748b;--line:#e4ebf3;--soft:#f5f8fc;--white:#fff;--shadow:0 18px 55px rgba(7,27,54,.12);--radius:22px}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:Inter,Segoe UI,Arial,sans-serif;color:var(--ink);line-height:1.6;background:#fff}a{text-decoration:none;color:inherit}.container{width:min(1160px,92%);margin:auto}
+.top{background:#041224;color:#b9c9dc;font-size:12px;padding:8px 0}.top .container{display:flex;justify-content:space-between;gap:20px}.top a{color:#fff}.top a:hover{color:var(--orange2)}
+header{position:sticky;top:0;z-index:100;background:rgba(7,27,54,.96);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.08);color:#fff}.nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:25px}.brand{display:flex;align-items:center;gap:12px;font-weight:900;letter-spacing:.5px}.mark{width:42px;height:42px;border:3px solid var(--orange);border-radius:10px;display:grid;place-items:center;transform:rotate(45deg)}.mark span{transform:rotate(-45deg);font-size:20px}.brand small{display:block;color:#a9bdd5;font-size:9px;letter-spacing:2px;margin-top:-2px}.navlinks{display:flex;align-items:center;gap:25px;font-size:14px}.navlinks a:hover{color:var(--orange2)}.navcta{background:var(--orange);color:#111!important;padding:11px 17px;border-radius:999px;font-weight:900}.navcta:hover{background:var(--orange2)}
+.hero{position:relative;overflow:hidden;color:#fff;background:radial-gradient(circle at 82% 28%,#18558d 0,#0c3158 24%,#071b36 62%)}.hero:after{content:"";position:absolute;width:420px;height:420px;border:1px solid rgba(255,255,255,.08);border-radius:50%;right:-140px;bottom:-190px}.hero-grid{min-height:650px;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:50px;padding:76px 0}.eyebrow{color:var(--orange2);font-weight:900;letter-spacing:2px;text-transform:uppercase;font-size:12px;margin-bottom:15px}.hero h1{font-size:clamp(45px,6vw,78px);line-height:.98;letter-spacing:-3px;margin-bottom:25px}.hero h1 span{color:var(--orange)}.hero-lead{font-size:20px;color:#d7e5f3;max-width:680px;margin-bottom:29px}.buttons{display:flex;gap:13px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 21px;border-radius:11px;font-weight:900;border:0;cursor:pointer}.primary{background:var(--orange);color:#111}.primary:hover{background:var(--orange2)}.outline{border:1px solid #6885a4;color:#fff}.outline:hover{border-color:#fff}.micro{display:flex;flex-wrap:wrap;gap:10px;margin-top:25px;color:#bcd0e5;font-size:12px}.micro span{padding:6px 10px;border:1px solid rgba(255,255,255,.13);border-radius:999px;background:rgba(255,255,255,.04)}
+.visual{min-height:490px;position:relative;display:grid;place-items:center}.dashboard{width:min(455px,92%);background:rgba(255,255,255,.96);color:var(--ink);border:1px solid rgba(255,255,255,.45);border-radius:25px;padding:22px;box-shadow:0 30px 70px rgba(0,0,0,.28);transform:rotate(1deg)}.dash-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px}.dash-title{font-weight:900}.pill{font-size:10px;background:#eaf4ff;color:var(--blue);padding:6px 9px;border-radius:999px;font-weight:900}.flow{display:grid;gap:9px}.flow-row{display:flex;align-items:center;gap:10px;padding:12px;border:1px solid var(--line);border-radius:13px;background:#fff}.flow-icon{width:34px;height:34px;border-radius:10px;background:var(--soft);display:grid;place-items:center}.flow-row strong{font-size:13px;display:block}.flow-row small{font-size:10px;color:var(--muted)}.arrow{text-align:center;color:var(--orange);font-weight:900}.save{margin-top:18px;background:var(--navy);color:#fff;border-radius:15px;padding:15px;display:flex;justify-content:space-between;align-items:center}.save strong{color:var(--orange2);font-size:21px}.floating{position:absolute;background:#fff;color:var(--navy);border-radius:13px;padding:10px 13px;box-shadow:var(--shadow);font-size:11px;font-weight:900}.f1{top:50px;left:0}.f2{top:25px;right:0}.f3{bottom:60px;left:5px}.f4{bottom:30px;right:5px}
+.trust{background:#fff;position:relative;margin-top:-42px;z-index:5;border-radius:18px;box-shadow:0 12px 35px rgba(7,27,54,.13);display:grid;grid-template-columns:repeat(4,1fr);overflow:hidden}.trust-item{padding:22px;border-right:1px solid var(--line);text-align:center}.trust-item:last-child{border:0}.trust-item strong{display:block;color:var(--navy);font-size:16px}.trust-item span{font-size:12px;color:var(--muted)}
+section{padding:92px 0}.section-head{text-align:center;max-width:780px;margin:0 auto 48px}.section-head .eyebrow{margin-bottom:11px}.section-head h2{font-size:42px;line-height:1.08;letter-spacing:-1.2px;color:var(--navy);margin-bottom:14px}.section-head p{color:var(--muted);font-size:16px}
+.problem{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}.problem h2{font-size:42px;line-height:1.08;color:var(--navy);letter-spacing:-1.2px;margin-bottom:16px}.problem>div>p{color:var(--muted);margin-bottom:25px}.pain{display:grid;gap:12px}.pain-item{display:flex;gap:13px;padding:15px;border:1px solid var(--line);border-radius:15px;background:#fff}.x{width:29px;height:29px;border-radius:50%;background:#fff2e4;color:#d96d00;display:grid;place-items:center;font-weight:900;flex:none}.pain-item strong{display:block;font-size:14px}.pain-item span{display:block;font-size:12px;color:var(--muted)}.solution-box{background:linear-gradient(145deg,#0c3158,#071b36);border-radius:28px;padding:32px;color:#fff;box-shadow:var(--shadow)}.solution-box h3{font-size:25px;margin-bottom:8px}.solution-box p{color:#c5d5e6;font-size:14px}.mini-flow{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-top:22px}.mini-flow b{padding:9px 11px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.1);border-radius:9px;font-size:11px}.mini-flow i{color:var(--orange);font-style:normal}
+.alt{background:var(--soft)}.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:25px;box-shadow:0 8px 25px rgba(7,27,54,.05);transition:.2s}.card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}.icon{width:47px;height:47px;border-radius:14px;background:#eef6ff;display:grid;place-items:center;font-size:24px;margin-bottom:15px}.card h3{color:var(--navy);font-size:18px;margin-bottom:7px}.card p{font-size:13px;color:var(--muted)}.tag{display:inline-block;margin-top:14px;font-size:10px;font-weight:900;color:var(--blue);background:#eef6ff;padding:5px 8px;border-radius:999px}
+.cases{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.case{border:1px solid var(--line);border-radius:22px;overflow:hidden;background:#fff;box-shadow:0 9px 25px rgba(7,27,54,.06)}.case-top{padding:22px;background:linear-gradient(145deg,#0c3158,#071b36);color:#fff}.case-top small{color:var(--orange2);font-weight:900;text-transform:uppercase;letter-spacing:1px}.case-top h3{margin-top:7px;font-size:21px}.case-body{padding:21px}.case-body p{font-size:13px;color:var(--muted);margin-bottom:14px}.case-flow{font-size:12px;font-weight:800;color:var(--navy);line-height:1.8}.demo{font-size:10px;color:#8a5a00;background:#fff5e4;border-radius:999px;padding:5px 8px;display:inline-block;margin-top:13px;font-weight:900}
+.process{display:grid;grid-template-columns:repeat(5,1fr);gap:13px}.step{background:var(--navy);color:#fff;border-radius:19px;padding:24px 18px;position:relative}.step .num{color:var(--orange2);font-size:11px;font-weight:900}.step h3{font-size:17px;margin:8px 0}.step p{font-size:12px;color:#bfd0e3}.step:after{content:"→";position:absolute;right:-12px;top:50%;color:var(--orange);font-size:18px;font-weight:900}.step:last-child:after{display:none}
+.why{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}.why h2{font-size:42px;line-height:1.08;color:var(--navy);margin-bottom:15px}.why>div>p{color:var(--muted);margin-bottom:24px}.why-list{display:grid;gap:12px}.why-item{display:flex;gap:12px;padding:14px;border:1px solid var(--line);border-radius:14px}.check{width:30px;height:30px;border-radius:50%;background:#eaf4ff;color:var(--blue);display:grid;place-items:center;font-weight:900;flex:none}.why-item strong{display:block;font-size:14px}.why-item span{font-size:12px;color:var(--muted)}.founder{background:linear-gradient(145deg,#071b36,#0d3158);border-radius:28px;padding:34px;color:#fff;box-shadow:var(--shadow)}.founder-badge{display:inline-block;background:rgba(255,152,0,.14);color:var(--orange2);padding:6px 10px;border-radius:999px;font-size:10px;font-weight:900;letter-spacing:1px}.founder h3{font-size:30px;margin:14px 0 4px}.founder .role{color:#b9cee3;font-size:13px}.founder p{color:#c9d7e6;font-size:14px;margin-top:18px}.founder .skills{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}.skills span{border:1px solid rgba(255,255,255,.12);padding:7px 9px;border-radius:999px;font-size:10px;color:#dce8f3}
+.industries{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.industry{background:#fff;border:1px solid var(--line);border-radius:15px;padding:19px;font-weight:900;color:var(--navy);box-shadow:0 7px 20px rgba(7,27,54,.04)}.industry span{display:block;font-size:12px;color:var(--muted);font-weight:500;margin-top:3px}
+.cta{background:linear-gradient(120deg,var(--orange),#ffc34d);padding:72px 0}.cta-box{display:flex;justify-content:space-between;align-items:center;gap:35px}.cta h2{font-size:42px;line-height:1.05;color:#111820;letter-spacing:-1px}.cta p{max-width:680px;color:#3f454c;margin-top:10px}.dark{background:var(--navy);color:#fff}.dark:hover{background:#0d3158}
+.contact{display:grid;grid-template-columns:.9fr 1.1fr;gap:28px}.contact-card{background:var(--navy);border-radius:25px;padding:34px;color:#fff}.contact-card h2{font-size:37px;line-height:1.08;margin:12px 0}.contact-card>p{color:#c7d5e4}.contact-row{display:flex;gap:12px;align-items:center;margin-top:18px;font-size:14px}.contact-row a:hover{color:var(--orange2)}.note{margin-top:25px;padding:14px;border:1px solid rgba(255,255,255,.1);border-radius:13px;color:#bcd0e4;font-size:11px}.form{border:1px solid var(--line);border-radius:25px;padding:30px;box-shadow:var(--shadow)}.form h3{font-size:27px;color:var(--navy);margin-bottom:5px}.form>p{font-size:12px;color:var(--muted);margin-bottom:20px}label{font-size:12px;font-weight:900;color:var(--navy);display:block;margin:0 0 6px}input,select,textarea{width:100%;border:1px solid #d7e1ec;border-radius:11px;padding:12px 13px;margin-bottom:14px;font:inherit;outline:none;background:#fff}input:focus,select:focus,textarea:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(20,121,209,.1)}textarea{min-height:105px;resize:vertical}.form .btn{width:100%}.form small{display:block;color:#7b8797;font-size:10px;margin-top:9px;text-align:center}
+.faq{display:grid;grid-template-columns:1fr 1fr;gap:14px}.faq details{border:1px solid var(--line);border-radius:15px;padding:16px 18px;background:#fff}.faq summary{cursor:pointer;font-weight:900;color:var(--navy);font-size:14px}.faq p{font-size:12px;color:var(--muted);padding-top:10px}
+footer{background:#041224;color:#91a8c0;padding:26px 0;font-size:11px}.foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.foot strong{color:#fff}.wa{position:fixed;right:20px;bottom:20px;width:59px;height:59px;border-radius:50%;background:#25D366;color:#fff;display:grid;place-items:center;font-weight:900;font-size:23px;box-shadow:0 10px 30px rgba(0,0,0,.25);z-index:200}.wa:hover{transform:scale(1.05)}
+@media(max-width:950px){.navlinks{display:none}.hero-grid,.problem,.why,.contact{grid-template-columns:1fr}.visual{min-height:430px}.cards{grid-template-columns:repeat(2,1fr)}.process{grid-template-columns:1fr 1fr}.step:after{display:none}.industries{grid-template-columns:repeat(2,1fr)}.trust{grid-template-columns:repeat(2,1fr)}.trust-item:nth-child(2){border-right:0}.trust-item{border-bottom:1px solid var(--line)}.cases{grid-template-columns:1fr}.faq{grid-template-columns:1fr}.cta-box{flex-direction:column;align-items:flex-start}}
+@media(max-width:580px){.top .container{justify-content:center;text-align:center}.top .hide-mobile{display:none}.nav{height:68px}.hero-grid{padding:60px 0}.hero h1{font-size:52px}.hero-lead{font-size:17px}.visual{display:none}.trust{grid-template-columns:1fr;margin-top:-25px}.trust-item{border-right:0}.cards,.process,.industries{grid-template-columns:1fr}section{padding:68px 0}.section-head h2,.problem h2,.why h2,.cta h2{font-size:32px}.cta{padding:55px 0}.contact-card h2{font-size:31px}}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"Aurixa Automation","description":"Intelligent automation services for growing businesses.","telephone":"+91 96599 23000","email":"hariacr5@gmail.com","address":{"@type":"PostalAddress","addressLocality":"Coimbatore","addressRegion":"Tamil Nadu","addressCountry":"IN"}}</script>
 </head>
 <body>
-  <div class="topbar">Proudly based in Coimbatore • Serving businesses across India</div>
-  <header>
-    <div class="container nav">
-      <a class="brand" href="#home">
-        <div class="logo"><span>A</span></div>
-        <div>AURIXA<small>INTELLIGENT AUTOMATION</small></div>
-      </a>
-      <nav>
-        <a href="#solutions">Solutions</a><a href="#industries">Industries</a><a href="#process">How We Work</a><a href="#contact">Contact</a>
-        <a class="navcta" href="#assessment">Free Assessment</a>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <section class="hero" id="home">
-      <div class="container hero-grid">
-        <div>
-          <div class="eyebrow">Intelligent Automation • Coimbatore</div>
-          <h1>Work Smarter.<br><span>Not Harder.</span></h1>
-          <p>We automate repetitive business work across SAP, Excel, Email, ERP and AI-powered workflows—so your team can focus on what truly grows your business.</p>
-          <div class="buttons">
-            <a class="btn btn-primary" href="#assessment">Get Free Automation Assessment</a>
-            <a class="btn btn-secondary" href="https://wa.me/919659923000?text=Hi%20Aurixa%2C%20I%27d%20like%20a%20free%20automation%20assessment." target="_blank">Chat on WhatsApp</a>
-          </div>
-        </div>
-        <div class="hero-card" aria-hidden="true">
-          <div class="orb"></div><div class="robot">🤖</div>
-          <div class="bubble b1">⚙️ RPA & Workflow</div><div class="bubble b2">📊 Excel & MIS</div>
-          <div class="bubble b3">🧾 Invoice Automation</div><div class="bubble b4">🧠 AI & Agents</div>
-        </div>
-      </div>
-    </section>
-
-    <div class="container stats">
-      <div class="stat"><strong>Save Time</strong><span>Reduce repetitive manual effort</span></div>
-      <div class="stat"><strong>Reduce Cost</strong><span>Do more with your existing team</span></div>
-      <div class="stat"><strong>Improve Accuracy</strong><span>Reduce avoidable human errors</span></div>
-      <div class="stat"><strong>Scale Faster</strong><span>Automate growing transaction volumes</span></div>
-    </div>
-
-    <section id="solutions">
-      <div class="container">
-        <div class="section-head"><div class="eyebrow">What We Do</div><h2>Automation that solves real business problems</h2><p>We focus on measurable business outcomes—not technology for technology's sake.</p></div>
-        <div class="cards">
-          <div class="card"><div class="icon">🤖</div><h3>RPA Development</h3><p>UiPath and Power Automate solutions for repetitive, rule-based processes.</p></div>
-          <div class="card"><div class="icon">🏭</div><h3>SAP Automation</h3><p>Automate SAP data extraction, transactions, reporting and recurring operations.</p></div>
-          <div class="card"><div class="icon">📊</div><h3>Excel & MIS</h3><p>Automated consolidation, validation, reporting, dashboards and distribution.</p></div>
-          <div class="card"><div class="icon">🧾</div><h3>Invoice Processing</h3><p>OCR, document extraction, validation and intelligent invoice workflows.</p></div>
-          <div class="card"><div class="icon">✉️</div><h3>Email Automation</h3><p>Classify emails, extract data, trigger workflows and send automated responses.</p></div>
-          <div class="card"><div class="icon">🔗</div><h3>Data Integration</h3><p>Connect APIs, databases, ERP systems and business applications.</p></div>
-          <div class="card"><div class="icon">🧠</div><h3>AI Automation</h3><p>Use AI, LLMs and intelligent workflows for decisions and document-heavy work.</p></div>
-          <div class="card"><div class="icon">🛠️</div><h3>Managed Automation</h3><p>Monitoring, support, enhancements and continuous process improvement.</p></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="alt">
-      <div class="container impact">
-        <div><div class="eyebrow">Business Impact</div><h2>We don't just build bots. We deliver measurable business results.</h2><p>Every automation starts with understanding the current process, pain points, effort and expected ROI.</p><a class="btn btn-primary" href="#assessment">Find Your Automation Opportunity</a></div>
-        <div class="impact-list">
-          <div class="impact-item"><div class="check">✓</div><div><strong>Lower Operating Costs</strong><span>Reduce manual effort and repetitive workload.</span></div></div>
-          <div class="impact-item"><div class="check">✓</div><div><strong>Faster Processing</strong><span>Run recurring tasks consistently and at scale.</span></div></div>
-          <div class="impact-item"><div class="check">✓</div><div><strong>Better Accuracy</strong><span>Standardize validation and reduce avoidable errors.</span></div></div>
-          <div class="impact-item"><div class="check">✓</div><div><strong>Better Visibility</strong><span>Automated reports and dashboards for decision makers.</span></div></div>
-          <div class="impact-item"><div class="check">✓</div><div><strong>Scalable Operations</strong><span>Handle higher volumes without adding the same level of manual effort.</span></div></div>
-        </div>
-      </div>
-    </section>
-
-    <section id="process">
-      <div class="container">
-        <div class="section-head"><div class="eyebrow">Our Approach</div><h2>From manual process to measurable automation</h2></div>
-        <div class="process">
-          <div class="step"><div class="num">01</div><h3>Discover</h3><p>Understand your process, people, systems and pain points.</p></div>
-          <div class="step"><div class="num">02</div><h3>Analyze</h3><p>Assess automation feasibility, effort, risk and potential ROI.</p></div>
-          <div class="step"><div class="num">03</div><h3>Automate</h3><p>Build, test and deploy the right automation solution.</p></div>
-          <div class="step"><div class="num">04</div><h3>Monitor</h3><p>Track execution, exceptions, accuracy and performance.</p></div>
-          <div class="step"><div class="num">05</div><h3>Optimize</h3><p>Improve continuously and scale automation to more processes.</p></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="alt" id="industries">
-      <div class="container">
-        <div class="section-head"><div class="eyebrow">Industries</div><h2>Built for growing businesses</h2><p>Starting from Coimbatore, serving SMEs and enterprises across India.</p></div>
-        <div class="industries">
-          <div class="industry">🏭 Manufacturing & Engineering</div><div class="industry">🧵 Textile & Garments</div>
-          <div class="industry">🌐 Export & Import</div><div class="industry">💰 Finance & Accounting</div>
-          <div class="industry">🎧 BPO & Shared Services</div><div class="industry">🚚 Logistics & Supply Chain</div>
-          <div class="industry">🏥 Healthcare</div><div class="industry">🛒 Retail & Distribution</div>
-        </div>
-      </div>
-    </section>
-
-    <section class="cta" id="assessment">
-      <div class="container cta-box">
-        <div><h2>Ready to automate your business?</h2><p>Tell us about one repetitive process. We'll help you identify the opportunity and discuss a practical automation approach.</p></div>
-        <a class="btn btn-dark" href="https://wa.me/919659923000?text=Hi%20Hari%2C%20I%27d%20like%20to%20book%20a%20free%20automation%20discovery%20session." target="_blank">Book Free 30-Min Discovery</a>
-      </div>
-    </section>
-
-    <section id="contact">
-      <div class="container contact">
-        <div class="contact-card">
-          <div class="eyebrow">Let's Connect</div><h2>Start with one process.</h2><p>One good automation can be the beginning of a much larger transformation.</p>
-          <div class="contact-row">📱 <a href="tel:+919659923000">+91 96599 23000</a></div>
-          <div class="contact-row">✉️ <a href="mailto:hariacr5@gmail.com">hariacr5@gmail.com</a></div>
-          <div class="contact-row">📍 Coimbatore, Tamil Nadu, India</div>
-        </div>
-        <form action="mailto:hariacr5@gmail.com" method="post" enctype="text/plain">
-          <h3 style="color:#071b36;font-size:25px;margin-bottom:15px">Request an Automation Assessment</h3>
-          <label>Name</label><input name="Name" required>
-          <label>Company</label><input name="Company">
-          <label>Phone / WhatsApp</label><input name="Phone" required>
-          <label>What process would you like to automate?</label><textarea name="Process" required></textarea>
-          <button class="btn btn-primary" type="submit" style="border:0;cursor:pointer;width:100%">Send Request</button>
-        </form>
-      </div>
-    </section>
-  </main>
-
-  <footer><div class="container">© 2026 Aurixa Automation • Founded by Hari Kumar • Coimbatore, Tamil Nadu</div></footer>
-  <a class="wa" href="https://wa.me/919659923000?text=Hi%20Aurixa%2C%20I%27m%20interested%20in%20automation." target="_blank" aria-label="WhatsApp">W</a>
+<div class="top"><div class="container"><span>Coimbatore • Tamil Nadu • India</span><span class="hide-mobile">Business enquiries: <a href="mailto:hariacr5@gmail.com">hariacr5@gmail.com</a></span></div></div>
+<header><div class="container nav"><a class="brand" href="#home"><div class="mark"><span>A</span></div><div>AURIXA<small>INTELLIGENT AUTOMATION</small></div></a><nav class="navlinks"><a href="#solutions">Solutions</a><a href="#usecases">Use Cases</a><a href="#industries">Industries</a><a href="#about">About</a><a href="#contact">Contact</a><a class="navcta" href="#assessment">Free Assessment</a></nav></div></header>
+<main>
+<section class="hero" id="home"><div class="container hero-grid"><div><div class="eyebrow">Intelligent Automation for Growing Businesses</div><h1>Turn repetitive work into <span>business advantage.</span></h1><p class="hero-lead">Aurixa helps businesses automate manual processes across SAP, Excel, email, ERP, documents and AI-powered workflows—so teams can spend more time on work that matters.</p><div class="buttons"><a class="btn primary" href="#assessment">Get a Free Automation Assessment</a><a class="btn outline" href="https://wa.me/919659923000?text=Hi%20Aurixa%2C%20I%27d%20like%20to%20discuss%20an%20automation%20opportunity." target="_blank" rel="noopener">Chat on WhatsApp</a></div><div class="micro"><span>RPA</span><span>SAP</span><span>Excel</span><span>AI</span><span>APIs</span><span>Document Automation</span></div></div><div class="visual"><div class="dashboard"><div class="dash-head"><div class="dash-title">AURIXA WORKFLOW</div><div class="pill">AUTOMATED</div></div><div class="flow"><div class="flow-row"><div class="flow-icon">📩</div><div><strong>Business Email</strong><small>Request received</small></div></div><div class="arrow">↓</div><div class="flow-row"><div class="flow-icon">🧠</div><div><strong>AI / RPA Processing</strong><small>Read • validate • decide</small></div></div><div class="arrow">↓</div><div class="flow-row"><div class="flow-icon">🏭</div><div><strong>ERP / SAP / Excel</strong><small>Update • reconcile • report</small></div></div></div><div class="save"><div><small>Outcome</small><br><b>Less manual work</b></div><strong>✓</strong></div></div><div class="floating f1">⚙️ RPA</div><div class="floating f2">📊 MIS</div><div class="floating f3">🧾 Documents</div><div class="floating f4">🧠 AI</div></div></div></section>
+<div class="container trust"><div class="trust-item"><strong>Business-first</strong><span>Understand the process before the technology</span></div><div class="trust-item"><strong>ROI-focused</strong><span>Prioritize practical automation opportunities</span></div><div class="trust-item"><strong>Founder-led</strong><span>Direct attention from discovery to delivery</span></div><div class="trust-item"><strong>Coimbatore-based</strong><span>Serving businesses across India</span></div></div>
+<section><div class="container problem"><div><div class="eyebrow">Sound familiar?</div><h2>Your team is busy. But is it busy doing the right work?</h2><p>Many businesses still depend on people to copy data, reconcile files, prepare recurring reports, process emails and move information between systems.</p><div class="pain"><div class="pain-item"><div class="x">×</div><div><strong>Hours lost to repetitive Excel work</strong><span>Consolidation, validation, formatting and recurring MIS preparation.</span></div></div><div class="pain-item"><div class="x">×</div><div><strong>Manual data movement between systems</strong><span>People repeatedly copy information between email, ERP, SAP and spreadsheets.</span></div></div><div class="pain-item"><div class="x">×</div><div><strong>Errors and delays in routine processes</strong><span>Manual steps make high-volume operations harder to scale.</span></div></div></div></div><div class="solution-box"><div class="eyebrow">The Aurixa Approach</div><h3>Find the process. Prove the value. Then automate.</h3><p>We start with one real business process, map the current effort, identify automation opportunities and design a practical solution.</p><div class="mini-flow"><b>Process</b><i>→</i><b>Assess</b><i>→</i><b>Automate</b><i>→</i><b>Measure</b></div></div></div></section>
+<section class="alt" id="solutions"><div class="container"><div class="section-head"><div class="eyebrow">Solutions</div><h2>Practical automation across your business</h2><p>Choose the problem first. Then use the right mix of RPA, AI, APIs, data and workflow automation.</p></div><div class="cards"><div class="card"><div class="icon">🤖</div><h3>RPA & Workflow</h3><p>Automate repetitive, rule-based tasks using UiPath, Power Automate and workflow tools.</p><span class="tag">PROCESS AUTOMATION</span></div><div class="card"><div class="icon">🏭</div><h3>SAP Automation</h3><p>Automate SAP data extraction, recurring transactions, reporting and surrounding business processes.</p><span class="tag">SAP + RPA</span></div><div class="card"><div class="icon">📊</div><h3>Excel & MIS</h3><p>Consolidate files, validate data, generate recurring reports and distribute results automatically.</p><span class="tag">REPORTING</span></div><div class="card"><div class="icon">🧾</div><h3>Document Automation</h3><p>Extract, validate and route information from invoices, PDFs and business documents.</p><span class="tag">IDP / OCR</span></div><div class="card"><div class="icon">✉️</div><h3>Email Automation</h3><p>Classify requests, extract information, trigger workflows and automate responses.</p><span class="tag">EMAIL WORKFLOWS</span></div><div class="card"><div class="icon">🔗</div><h3>API & Data Integration</h3><p>Connect applications, databases and business systems to reduce manual data movement.</p><span class="tag">INTEGRATION</span></div><div class="card"><div class="icon">🧠</div><h3>AI Automation</h3><p>Use AI and LLM-powered workflows where interpretation, classification or summarization adds value.</p><span class="tag">AI + AUTOMATION</span></div><div class="card"><div class="icon">🛠️</div><h3>Managed Automation</h3><p>Support, monitoring, exception handling and continuous improvements after deployment.</p><span class="tag">SUPPORT</span></div></div></div></section>
+<section id="usecases"><div class="container"><div class="section-head"><div class="eyebrow">Illustrative Use Cases</div><h2>What automation can look like</h2><p>These are sample scenarios to show the type of work Aurixa can help automate. Actual scope and results depend on each business process.</p></div><div class="cases"><div class="case"><div class="case-top"><small>Manufacturing</small><h3>SAP → Excel → Management Report</h3></div><div class="case-body"><p>Automate recurring data extraction, validation, consolidation and report distribution.</p><div class="case-flow">SAP data → validation → Excel/MIS → management email</div><span class="demo">DEMO SCENARIO</span></div></div><div class="case"><div class="case-top"><small>Finance</small><h3>Invoice → Data → Validation</h3></div><div class="case-body"><p>Extract invoice information, apply business rules and route exceptions for human review.</p><div class="case-flow">Email/PDF → extraction → validation → workflow</div><span class="demo">DEMO SCENARIO</span></div></div><div class="case"><div class="case-top"><small>Operations</small><h3>Email → Process → Response</h3></div><div class="case-body"><p>Classify incoming requests, capture key details and trigger the right downstream process.</p><div class="case-flow">Inbox → classification → action → response</div><span class="demo">DEMO SCENARIO</span></div></div></div></div></section>
+<section class="alt" id="process"><div class="container"><div class="section-head"><div class="eyebrow">How We Work</div><h2>Start small. Prove value. Scale what works.</h2></div><div class="process"><div class="step"><div class="num">01</div><h3>Discover</h3><p>Understand the process, people, systems and pain points.</p></div><div class="step"><div class="num">02</div><h3>Assess</h3><p>Estimate feasibility, effort, risk and potential business value.</p></div><div class="step"><div class="num">03</div><h3>Pilot</h3><p>Build a focused automation to prove the approach.</p></div><div class="step"><div class="num">04</div><h3>Deploy</h3><p>Test, document and move the solution into production.</p></div><div class="step"><div class="num">05</div><h3>Scale</h3><p>Monitor, improve and identify the next opportunity.</p></div></div></div></section>
+<section id="about"><div class="container why"><div><div class="eyebrow">Why Aurixa</div><h2>Technology is important. Understanding the business is more important.</h2><p>Aurixa is designed around practical business automation—starting with the process and selecting the technology that fits.</p><div class="why-list"><div class="why-item"><div class="check">✓</div><div><strong>Business-process thinking</strong><span>Focus on where time, effort and repetitive work are actually being spent.</span></div></div><div class="why-item"><div class="check">✓</div><div><strong>Automation across the stack</strong><span>RPA, SAP, Excel, SQL, APIs, documents and AI can work together.</span></div></div><div class="why-item"><div class="check">✓</div><div><strong>Clear, practical delivery</strong><span>Start with a defined process, measurable objective and controlled rollout.</span></div></div><div class="why-item"><div class="check">✓</div><div><strong>Built for growing businesses</strong><span>Begin with one process and expand as the value becomes visible.</span></div></div></div></div><div class="founder"><span class="founder-badge">FOUNDER-LED</span><h3>Hari Kumar</h3><div class="role">Founder & Automation Consultant</div><p>Aurixa was created to help businesses move repetitive operational work from people to reliable digital workflows. The focus is practical automation across business applications, data and documents—not technology for its own sake.</p><div class="skills"><span>UiPath</span><span>SAP</span><span>SQL</span><span>Excel</span><span>Power Automate</span><span>AI Automation</span></div></div></div></section>
+<section class="alt" id="industries"><div class="container"><div class="section-head"><div class="eyebrow">Industries</div><h2>Built for teams that have repetitive work to eliminate</h2><p>Starting in Coimbatore and serving businesses across India.</p></div><div class="industries"><div class="industry">🏭 Manufacturing & Engineering<span>Operations, reporting, procurement and data workflows</span></div><div class="industry">🧵 Textile & Garments<span>Orders, reports, documentation and repetitive office work</span></div><div class="industry">🌐 Export & Import<span>Documents, email, order and reporting workflows</span></div><div class="industry">💰 Finance & Accounting<span>Invoices, reconciliation, reporting and data validation</span></div><div class="industry">🎧 BPO & Shared Services<span>High-volume repetitive transactions and back-office work</span></div><div class="industry">🚚 Logistics & Supply Chain<span>Tracking, reporting, data movement and exception workflows</span></div><div class="industry">🏥 Healthcare<span>Administrative and document-heavy workflows</span></div><div class="industry">🛒 Retail & Distribution<span>Orders, inventory, reporting and operational processes</span></div></div></div></section>
+<section><div class="container"><div class="section-head"><div class="eyebrow">FAQ</div><h2>Simple answers before you start</h2></div><div class="faq"><details><summary>Do I need UiPath to work with Aurixa?</summary><p>No. The right technology depends on the process. We can evaluate RPA, workflow tools, APIs, data automation and AI-based approaches.</p></details><details><summary>Can a small business benefit from automation?</summary><p>Yes. A good starting point is one repetitive process with enough volume or effort to justify automation.</p></details><details><summary>How do we identify a process to automate?</summary><p>Start with a process that is repetitive, rules-driven, time-consuming, error-prone or involves moving data between systems.</p></details><details><summary>What happens in the free assessment?</summary><p>We discuss one process, understand the current steps and identify whether automation is worth exploring. There is no obligation to proceed.</p></details></div></div></section>
+<section class="cta" id="assessment"><div class="container cta-box"><div><h2>One process could be your first automation.</h2><p>Tell us what your team does manually every day. Let's explore whether it can be automated.</p></div><a class="btn dark" href="https://wa.me/919659923000?text=Hi%20Hari%2C%20I%27d%20like%20to%20book%20a%20free%2030-minute%20automation%20discovery%20session." target="_blank" rel="noopener">Book Free 30-Min Discovery</a></div></section>
+<section id="contact"><div class="container contact"><div class="contact-card"><div class="eyebrow">Let's Connect</div><h2>Tell us about the process you'd like to automate.</h2><p>Send a short description. We'll use it as the starting point for an automation discussion.</p><div class="contact-row">📱 <a href="tel:+919659923000">+91 96599 23000</a></div><div class="contact-row">✉️ <a href="mailto:hariacr5@gmail.com">hariacr5@gmail.com</a></div><div class="contact-row">📍 Coimbatore, Tamil Nadu, India</div><div class="note">Prefer WhatsApp? Use the green button at the bottom of the page for a quick conversation.</div></div><form class="form" action="mailto:hariacr5@gmail.com" method="post" enctype="text/plain"><h3>Request an Automation Assessment</h3><p>Share a few details and we'll get back to you.</p><label>Name</label><input name="Name" required><label>Company</label><input name="Company"><label>Phone / WhatsApp</label><input name="Phone" required><label>Area</label><select name="Area"><option>Manufacturing / Operations</option><option>Finance / Accounting</option><option>SAP / ERP</option><option>Excel / MIS</option><option>Documents / Invoices</option><option>Email / Back Office</option><option>Other</option></select><label>What process would you like to automate?</label><textarea name="Process" required></textarea><button class="btn primary" type="submit">Send Automation Request</button><small>This form currently opens your email client. A dedicated lead form can be connected later.</small></form></div></section>
+</main>
+<footer><div class="container foot"><span>© 2026 <strong>Aurixa Automation</strong>. Intelligent Automation for Growing Businesses.</span><span>Coimbatore, Tamil Nadu • <a href="mailto:hariacr5@gmail.com">hariacr5@gmail.com</a> • +91 96599 23000</span></div></footer>
+<a class="wa" href="https://wa.me/919659923000?text=Hi%20Aurixa%2C%20I%27m%20interested%20in%20business%20automation." target="_blank" rel="noopener" aria-label="Chat with Aurixa Automation on WhatsApp">W</a>
 </body>
 </html>
