@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Aurixa Automation helps businesses automate repetitive work across SAP, Excel, email, ERP and AI-powered workflows.">
+  <title>Aurixa Automation | Intelligent Automation for Smarter Businesses</title>
+  <style>
+    :root{
+      --navy:#071b36; --navy2:#0d2b50; --orange:#ff9800; --orange2:#ffb52e;
+      --blue:#1479d1; --text:#15253b; --muted:#607089; --light:#f5f8fc; --white:#fff;
+      --shadow:0 14px 40px rgba(7,27,54,.12); --radius:20px;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:Arial,Helvetica,sans-serif;color:var(--text);background:#fff;line-height:1.6}
+    a{text-decoration:none;color:inherit}
+    .container{width:min(1120px,92%);margin:auto}
+    .topbar{background:var(--navy);color:#dbe8f7;font-size:13px;padding:8px 0;text-align:right}
+    header{position:sticky;top:0;z-index:50;background:rgba(7,27,54,.96);backdrop-filter:blur(10px);color:white}
+    .nav{height:72px;display:flex;align-items:center;justify-content:space-between}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.4px}
+    .logo{width:40px;height:40px;border:3px solid var(--orange);display:grid;place-items:center;transform:rotate(45deg);border-radius:8px}
+    .logo span{transform:rotate(-45deg);font-size:20px}
+    .brand small{display:block;color:#a9bdd5;font-size:10px;letter-spacing:1.5px}
+    nav{display:flex;gap:25px;font-size:14px}
+    nav a:hover{color:var(--orange2)}
+    .navcta{background:var(--orange);color:#111;padding:11px 16px;border-radius:999px;font-weight:800}
+    .hero{background:radial-gradient(circle at 78% 35%,#164d82 0,#0b2b50 30%,#071b36 70%);color:white;overflow:hidden}
+    .hero-grid{min-height:650px;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:40px;padding:80px 0}
+    .eyebrow{color:var(--orange2);font-weight:800;letter-spacing:2px;text-transform:uppercase;font-size:13px;margin-bottom:14px}
+    h1{font-size:clamp(44px,6vw,76px);line-height:.98;letter-spacing:-2px;margin-bottom:24px}
+    h1 span{color:var(--orange)}
+    .hero p{font-size:20px;color:#d6e4f3;max-width:650px;margin-bottom:30px}
+    .buttons{display:flex;gap:14px;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 21px;border-radius:10px;font-weight:800}
+    .btn-primary{background:var(--orange);color:#101010}
+    .btn-secondary{border:1px solid #6682a1;color:white}
+    .hero-card{position:relative;min-height:470px;display:grid;place-items:center}
+    .orb{width:350px;height:350px;border-radius:50%;background:radial-gradient(circle,#eef8ff 0 16%,#91c6ef 17% 35%,#1479d1 36% 55%,transparent 56%);filter:drop-shadow(0 0 55px rgba(20,121,209,.5))}
+    .robot{position:absolute;font-size:180px;filter:drop-shadow(0 20px 20px rgba(0,0,0,.25))}
+    .bubble{position:absolute;background:white;color:var(--navy);padding:10px 14px;border-radius:14px;box-shadow:var(--shadow);font-weight:800;font-size:12px}
+    .b1{top:55px;left:20px}.b2{top:25px;right:20px}.b3{bottom:95px;left:0}.b4{bottom:40px;right:35px}
+    .stats{background:white;color:var(--text);box-shadow:0 10px 30px rgba(0,0,0,.12);border-radius:18px;display:grid;grid-template-columns:repeat(4,1fr);margin-top:-55px;position:relative;z-index:5}
+    .stat{padding:24px;text-align:center;border-right:1px solid #e5ebf2}.stat:last-child{border:0}
+    .stat strong{display:block;font-size:28px;color:var(--orange);margin-bottom:4px}.stat span{font-size:13px;color:var(--muted)}
+    section{padding:90px 0}.section-head{text-align:center;max-width:760px;margin:0 auto 48px}
+    .section-head h2{font-size:40px;color:var(--navy);line-height:1.1;margin-bottom:14px}
+    .section-head p{color:var(--muted)}
+    .cards{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+    .card{background:white;border:1px solid #e7edf5;border-radius:var(--radius);padding:25px;box-shadow:0 8px 24px rgba(7,27,54,.06);transition:.2s}
+    .card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+    .icon{font-size:30px;margin-bottom:14px}.card h3{font-size:18px;margin-bottom:7px;color:var(--navy)}.card p{font-size:14px;color:var(--muted)}
+    .alt{background:var(--light)}
+    .impact{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+    .impact h2{font-size:42px;line-height:1.1;color:var(--navy);margin-bottom:18px}
+    .impact p{color:var(--muted);margin-bottom:25px}
+    .impact-list{display:grid;gap:14px}.impact-item{display:flex;gap:14px;align-items:flex-start;background:white;padding:17px;border-radius:14px;border:1px solid #e6edf5}
+    .check{width:30px;height:30px;border-radius:50%;background:#eaf4ff;color:var(--blue);display:grid;place-items:center;font-weight:900;flex:none}
+    .impact-item strong{display:block;color:var(--navy)}.impact-item span{font-size:13px;color:var(--muted)}
+    .process{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+    .step{position:relative;padding:25px 18px;background:var(--navy);color:white;border-radius:18px}.step .num{font-size:12px;color:var(--orange2);font-weight:900}.step h3{margin:8px 0}.step p{font-size:13px;color:#bfd0e4}
+    .industries{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.industry{padding:20px;background:white;border:1px solid #e5ebf2;border-radius:14px;font-weight:800;color:var(--navy)}
+    .cta{background:linear-gradient(120deg,var(--orange),#ffbf45);padding:70px 0}.cta-box{display:flex;justify-content:space-between;align-items:center;gap:30px}.cta h2{font-size:40px;line-height:1.1;color:#101820}.cta p{max-width:650px;margin-top:10px;color:#343b42}.btn-dark{background:var(--navy);color:white}
+    .contact{display:grid;grid-template-columns:1fr 1fr;gap:30px}.contact-card{background:var(--navy);color:white;border-radius:24px;padding:35px}.contact-card h2{font-size:38px;line-height:1.1;margin-bottom:12px}.contact-card p{color:#c3d3e6}.contact-row{display:flex;gap:13px;align-items:center;margin-top:20px}.contact-row a{color:white}.contact-row a:hover{color:var(--orange2)}
+    form{background:white;border:1px solid #e4ebf3;border-radius:24px;padding:30px;box-shadow:var(--shadow)}label{font-size:13px;font-weight:800;color:var(--navy);display:block;margin-bottom:6px}input,textarea,select{width:100%;border:1px solid #d9e2ed;border-radius:10px;padding:13px;margin-bottom:15px;font:inherit}textarea{min-height:110px;resize:vertical}
+    footer{background:#041224;color:#9eb2ca;padding:25px 0;text-align:center;font-size:13px}
+    .wa{position:fixed;right:20px;bottom:20px;width:58px;height:58px;border-radius:50%;background:#25D366;color:white;display:grid;place-items:center;font-weight:900;font-size:25px;box-shadow:0 8px 25px rgba(0,0,0,.25);z-index:60}
+    @media(max-width:900px){nav{display:none}.hero-grid,.impact,.contact{grid-template-columns:1fr}.hero-card{min-height:360px}.cards{grid-template-columns:repeat(2,1fr)}.process{grid-template-columns:1fr 1fr}.industries{grid-template-columns:repeat(2,1fr)}.stats{grid-template-columns:repeat(2,1fr)}.stat:nth-child(2){border-right:0}.stat{border-bottom:1px solid #e5ebf2}.cta-box{flex-direction:column;align-items:flex-start}}
+    @media(max-width:560px){section{padding:65px 0}.cards,.process,.industries{grid-template-columns:1fr}.stats{grid-template-columns:1fr}.stat{border-right:0}.hero-grid{padding:55px 0}.hero-card{display:none}h1{font-size:50px}.section-head h2,.impact h2,.cta h2{font-size:32px}}
+  </style>
+</head>
+<body>
+  <div class="topbar">Proudly based in Coimbatore • Serving businesses across India</div>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#home">
+        <div class="logo"><span>A</span></div>
+        <div>AURIXA<small>INTELLIGENT AUTOMATION</small></div>
+      </a>
+      <nav>
+        <a href="#solutions">Solutions</a><a href="#industries">Industries</a><a href="#process">How We Work</a><a href="#contact">Contact</a>
+        <a class="navcta" href="#assessment">Free Assessment</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">Intelligent Automation • Coimbatore</div>
+          <h1>Work Smarter.<br><span>Not Harder.</span></h1>
+          <p>We automate repetitive business work across SAP, Excel, Email, ERP and AI-powered workflows—so your team can focus on what truly grows your business.</p>
+          <div class="buttons">
+            <a class="btn btn-primary" href="#assessment">Get Free Automation Assessment</a>
+            <a class="btn btn-secondary" href="https://wa.me/919659923000?text=Hi%20Aurixa%2C%20I%27d%20like%20a%20free%20automation%20assessment." target="_blank">Chat on WhatsApp</a>
+          </div>
+        </div>
+        <div class="hero-card" aria-hidden="true">
+          <div class="orb"></div><div class="robot">🤖</div>
+          <div class="bubble b1">⚙️ RPA & Workflow</div><div class="bubble b2">📊 Excel & MIS</div>
+          <div class="bubble b3">🧾 Invoice Automation</div><div class="bubble b4">🧠 AI & Agents</div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container stats">
+      <div class="stat"><strong>Save Time</strong><span>Reduce repetitive manual effort</span></div>
+      <div class="stat"><strong>Reduce Cost</strong><span>Do more with your existing team</span></div>
+      <div class="stat"><strong>Improve Accuracy</strong><span>Reduce avoidable human errors</span></div>
+      <div class="stat"><strong>Scale Faster</strong><span>Automate growing transaction volumes</span></div>
+    </div>
+
+    <section id="solutions">
+      <div class="container">
+        <div class="section-head"><div class="eyebrow">What We Do</div><h2>Automation that solves real business problems</h2><p>We focus on measurable business outcomes—not technology for technology's sake.</p></div>
+        <div class="cards">
+          <div class="card"><div class="icon">🤖</div><h3>RPA Development</h3><p>UiPath and Power Automate solutions for repetitive, rule-based processes.</p></div>
+          <div class="card"><div class="icon">🏭</div><h3>SAP Automation</h3><p>Automate SAP data extraction, transactions, reporting and recurring operations.</p></div>
+          <div class="card"><div class="icon">📊</div><h3>Excel & MIS</h3><p>Automated consolidation, validation, reporting, dashboards and distribution.</p></div>
+          <div class="card"><div class="icon">🧾</div><h3>Invoice Processing</h3><p>OCR, document extraction, validation and intelligent invoice workflows.</p></div>
+          <div class="card"><div class="icon">✉️</div><h3>Email Automation</h3><p>Classify emails, extract data, trigger workflows and send automated responses.</p></div>
+          <div class="card"><div class="icon">🔗</div><h3>Data Integration</h3><p>Connect APIs, databases, ERP systems and business applications.</p></div>
+          <div class="card"><div class="icon">🧠</div><h3>AI Automation</h3><p>Use AI, LLMs and intelligent workflows for decisions and document-heavy work.</p></div>
+          <div class="card"><div class="icon">🛠️</div><h3>Managed Automation</h3><p>Monitoring, support, enhancements and continuous process improvement.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="alt">
+      <div class="container impact">
+        <div><div class="eyebrow">Business Impact</div><h2>We don't just build bots. We deliver measurable business results.</h2><p>Every automation starts with understanding the current process, pain points, effort and expected ROI.</p><a class="btn btn-primary" href="#assessment">Find Your Automation Opportunity</a></div>
+        <div class="impact-list">
+          <div class="impact-item"><div class="check">✓</div><div><strong>Lower Operating Costs</strong><span>Reduce manual effort and repetitive workload.</span></div></div>
+          <div class="impact-item"><div class="check">✓</div><div><strong>Faster Processing</strong><span>Run recurring tasks consistently and at scale.</span></div></div>
+          <div class="impact-item"><div class="check">✓</div><div><strong>Better Accuracy</strong><span>Standardize validation and reduce avoidable errors.</span></div></div>
+          <div class="impact-item"><div class="check">✓</div><div><strong>Better Visibility</strong><span>Automated reports and dashboards for decision makers.</span></div></div>
+          <div class="impact-item"><div class="check">✓</div><div><strong>Scalable Operations</strong><span>Handle higher volumes without adding the same level of manual effort.</span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="process">
+      <div class="container">
+        <div class="section-head"><div class="eyebrow">Our Approach</div><h2>From manual process to measurable automation</h2></div>
+        <div class="process">
+          <div class="step"><div class="num">01</div><h3>Discover</h3><p>Understand your process, people, systems and pain points.</p></div>
+          <div class="step"><div class="num">02</div><h3>Analyze</h3><p>Assess automation feasibility, effort, risk and potential ROI.</p></div>
+          <div class="step"><div class="num">03</div><h3>Automate</h3><p>Build, test and deploy the right automation solution.</p></div>
+          <div class="step"><div class="num">04</div><h3>Monitor</h3><p>Track execution, exceptions, accuracy and performance.</p></div>
+          <div class="step"><div class="num">05</div><h3>Optimize</h3><p>Improve continuously and scale automation to more processes.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="alt" id="industries">
+      <div class="container">
+        <div class="section-head"><div class="eyebrow">Industries</div><h2>Built for growing businesses</h2><p>Starting from Coimbatore, serving SMEs and enterprises across India.</p></div>
+        <div class="industries">
+          <div class="industry">🏭 Manufacturing & Engineering</div><div class="industry">🧵 Textile & Garments</div>
+          <div class="industry">🌐 Export & Import</div><div class="industry">💰 Finance & Accounting</div>
+          <div class="industry">🎧 BPO & Shared Services</div><div class="industry">🚚 Logistics & Supply Chain</div>
+          <div class="industry">🏥 Healthcare</div><div class="industry">🛒 Retail & Distribution</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta" id="assessment">
+      <div class="container cta-box">
+        <div><h2>Ready to automate your business?</h2><p>Tell us about one repetitive process. We'll help you identify the opportunity and discuss a practical automation approach.</p></div>
+        <a class="btn btn-dark" href="https://wa.me/919659923000?text=Hi%20Hari%2C%20I%27d%20like%20to%20book%20a%20free%20automation%20discovery%20session." target="_blank">Book Free 30-Min Discovery</a>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container contact">
+        <div class="contact-card">
+          <div class="eyebrow">Let's Connect</div><h2>Start with one process.</h2><p>One good automation can be the beginning of a much larger transformation.</p>
+          <div class="contact-row">📱 <a href="tel:+919659923000">+91 96599 23000</a></div>
+          <div class="contact-row">✉️ <a href="mailto:hariacr5@gmail.com">hariacr5@gmail.com</a></div>
+          <div class="contact-row">📍 Coimbatore, Tamil Nadu, India</div>
+        </div>
+        <form action="mailto:hariacr5@gmail.com" method="post" enctype="text/plain">
+          <h3 style="color:#071b36;font-size:25px;margin-bottom:15px">Request an Automation Assessment</h3>
+          <label>Name</label><input name="Name" required>
+          <label>Company</label><input name="Company">
+          <label>Phone / WhatsApp</label><input name="Phone" required>
+          <label>What process would you like to automate?</label><textarea name="Process" required></textarea>
+          <button class="btn btn-primary" type="submit" style="border:0;cursor:pointer;width:100%">Send Request</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="container">© 2026 Aurixa Automation • Founded by Hari Kumar • Coimbatore, Tamil Nadu</div></footer>
+  <a class="wa" href="https://wa.me/919659923000?text=Hi%20Aurixa%2C%20I%27m%20interested%20in%20automation." target="_blank" aria-label="WhatsApp">W</a>
+</body>
+</html>
