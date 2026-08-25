@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://hariacr5.github.io/aurixa-automation/sitemap.xml
